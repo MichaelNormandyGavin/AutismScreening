@@ -76,7 +76,7 @@ def df_get_uniform_dummies(df,astype='int64'):
 
 	assert isinstance(df,pd.DataFrame),"Only works with Pandas DataFrame"	
 
-	new_df = pd.get_dummies(df,drop_first=True,columns=['gender','ethnicity','relation'],prefix={'gender':'gen','ethnicity':'eth','relation':'rel'})
+	new_df = pd.get_dummies(df,drop_first=True,columns=['gender','ethnicity','age_range','relation'],prefix={'gender':'gen','ethnicity':'eth','age_range':'age','relation':'rel'})
 
 	new_df = new_df.select_dtypes(include=['category','int64','float64','uint8']).apply(pd.to_numeric).astype(astype)
 	return new_df
