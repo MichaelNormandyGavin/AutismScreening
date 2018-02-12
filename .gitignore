@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#ARFF Files
+AutismScreening/*.arff
+*.arff
+.arff
+
+#ZIP
+AutismScreening/*.zip
+*.zip
+.zip
